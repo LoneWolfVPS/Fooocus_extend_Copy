@@ -112,6 +112,10 @@
       "prompt": "inside car"
   },
   {
+      "name": "(place) Bus",
+      "prompt": "inside bus"
+  },
+  {
       "name": "(place) Mall",
       "prompt": "mall"
   },
