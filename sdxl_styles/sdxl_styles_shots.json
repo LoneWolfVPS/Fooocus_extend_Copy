@@ -1,5 +1,9 @@
 [
   {
+      "name": "(shot) Selfie",
+      "prompt": "(selfie)"
+  },
+  {
       "name": "(shot) Backshot",
       "prompt": "(back-shot rear-shot)"
   },
