@@ -13,11 +13,11 @@
   },
   {
       "name": "(time) Dawn",
-      "prompt": "dawn"
+      "prompt": "dawn, sunrise"
   },
   {
       "name": "(time) Dusk",
-      "prompt": "dusk"
+      "prompt": "dusk, sunset, evening twilight"
   },
   {
       "name": "(time) Night",
