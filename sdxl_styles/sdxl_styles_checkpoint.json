@@ -8,7 +8,7 @@
         "prompt": "masterpiece, best quality, highly detailed, score_9, score_8_up, score_7_up, score_6_up, score_5_up, score_4_up, {prompt}"
     },
     {
-        "name": "(main)) Pony Negative Default",
+        "name": "(main) Pony Negative Default",
         "negative_prompt": "score_4, score_5, score_6"
     },
     {
