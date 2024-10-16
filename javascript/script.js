@@ -192,25 +192,6 @@ function initStylePreviewOverlay() {
     overlay.appendChild(tooltip);
     overlay.id = 'stylePreviewOverlay';
     document.body.appendChild(overlay);
-
-    const jsonFiles = ['sdxl_styles_action.json', 'sdxl_styles_checkpoint.json', 'sdxl_styles_diva.json', 'sdxl_styles_femaleclothes.json', 'sdxl_styles_fooocus.json', 'sdxl_styles_lora.json', 'sdxl_styles_marc_k3nt3l.json', 'sdxl_styles_mre.json', 'sdxl_styles_place.json', 'sdxl_styles_plus.json', 'sdxl_styles_sai.json', 'sdxl_styles_shots.json', 'sdxl_styles_time.json', 'sdxl_styles_twri.json']; // Add the names of your JSON files here
-    let jsonData = [];
-
-    // Fetch all JSON data from the files
-    for (let jsonFile of jsonFiles) {
-        try {
-            const response = await fetch(samplesPath.replace(/\/[^\/]+$/, `/${jsonFile}`));
-            if (response.ok) {
-                const data = await response.json();
-                jsonData = jsonData.concat(data); // Combine all JSON data
-            } else {
-                console.error(`Error loading ${jsonFile}`);
-            }
-        } catch (err) {
-            console.error(`Error fetching ${jsonFile}`, err);
-        }
-    }
-    
     document.addEventListener('mouseover', function (e) {
         const label = e.target.closest('.style_selections label');
         if (!label) return;
@@ -225,19 +206,8 @@ function initStylePreviewOverlay() {
             name.toLowerCase().replaceAll(" ", "_")
         ).replaceAll("\\", "\\\\")}")`;
 
-        // Find the corresponding JSON entry by name
-        const matchingEntry = jsonData.find(entry => entry.name.toLowerCase() === name.toLowerCase());
+        tooltip.textContent = name;
 
-        let promptText = 'No additional info available';
-        if (matchingEntry) {
-            const prompt = matchingEntry.prompt || '';
-            const negativePrompt = matchingEntry.negative_prompt || '';
-            promptText = `Prompt: ${prompt} | Negative Prompt: ${negativePrompt}`;
-        }
-        
-        //tooltip.textContent = name;
-        tooltip.textContent = `${name} - ${promptText}`;
-        
         function onMouseLeave() {
             overlayVisible = false;
             overlay.style.opacity = "0";
