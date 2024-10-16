@@ -1,5 +1,21 @@
 [
   {
+      "name": "(female clothes addon) Sweaty Skin",
+      "prompt": "sweaty body, sweaty skin, sweat"
+  },
+  {
+      "name": "(female clothes addon) Wet Skin",
+      "prompt": "oily body, oily skin, oily"
+  },
+  {
+      "name": "(female clothes addon) Oily Skin",
+      "prompt": "oily body, oily skin"
+  },
+  {
+      "name": "(female clothes addon) Dirty Skin",
+      "prompt": "dirty body, dirty skin, dirty"
+  },
+  {
       "name": "(female clothes addon) Underboob",
       "prompt": "underboob"
   },
